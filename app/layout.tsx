@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import LightRays from "@/components/LightRays";
 import NavBar from "@/components/NavBar";
+import { Analytics } from "@vercel/analytics/next";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -59,6 +60,7 @@ export default function RootLayout({
           />
         </div>
         <main>{children}</main>
+        <Analytics />
       </body>
     </html>
   );
